@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//alert("Hello World ...");
+
+        val1 = 10;      //same var val1
+        var val2 = 5.5;
+        let val3 = "Wimonsiri";
+
+        var arr1 = [1,3,10,"May"];
+        var arr2 = [2,[3,5],0];
+
+        console.log(arr2);
+
+        obj1 = {
+        	        "name":"Wimonsiri",
+        	        "sname":"Duangrat",
+        	        "sex":"women",
+        	        "ID":"590112417033",
+        	    }
+        console.log(obj1);
+
+        obj2 = {
+        	        "ID":183,
+        	        "ADDR":{
+        	        	     "no": 99,
+        	        	     "road":"jira",
+        	        	     "prov":"Buriram",
+        	               }
+
+               }
+         console.log(obj2.ADDR.prov);
+
+         console.log(val1 + val2);  //0+5.5
+         console.log(val2 + val3);  //number+text
+
+         var number = "10.1";
+         console.log(val1 + number);
+
+         num = parseInt(number);
+         console.log(val1 + num);
+         num = parseFloat(number);
+         console.log(val1 + num);
+
+         function add(numA,numB){
+         	let result = numA + numB;
+         	console.log(result);
+         	return result;
+         };
+
+         add(4,5.3);
+
+	</script>
+</head>
+<body>
+    <input id="in1"></input>
+    <button id="btSend" onclick="getData()"> Send </button>
+    <br><label id="lb1"></label>
+
+    <hr>
+    jQuery Library<br>
+    <input id="in2"></input>
+    <button id="btSend2"> Send </button>
+    <br><label id="lb2"></label>
+    <hr>
+    <label id="lbCal"></label>
+
+</body>
+</html>
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+	$(function(){
+		//alert();
+		$("#btSend2").click(function(){
+		    val = $("#in2").val();
+		    $("#lb2").html(val);
+		});
+
+    $("#lbCal").load("php/cal.php?A=10&B=5.5");
+    
+	});
+</script>
